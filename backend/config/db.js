@@ -1,13 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const connectDB = async () => {
     try {
-        await mongoose.connect('mongodb://127.0.0.1:27017/ecom_pro', {
-            // Add options if needed, but modern Mongoose doesn't require useNewUrlParser/useUnifiedTopology
-        });
-        console.log("MongoDB connected successfully");
+        await mongoose.connect("mongodb://127.0.0.1:27017/ecommerce_db");
+
+        console.log("✅ MongoDB Connected Successfully");
     } catch (error) {
-        console.error("MongoDB connection failed:", error.message);
+        console.log("❌ MongoDB Connection Failed");
+        console.log(error.message);
+
         process.exit(1);
     }
 };
