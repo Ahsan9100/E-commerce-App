@@ -7,6 +7,7 @@ const authRoute = require("./routes/authRoute");
 const productRoute = require("./routes/productRoutes");
 const categoryRoute = require("./routes/categoryRoute");
 const cartRoute = require("./routes/cartRoute");
+const orderRoute = require("./routes/orderRoute");
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use("/api/categories", categoryRoute);
 
 app.use("/api/auth", authRoute);
 app.use("/api/cart", cartRoute);
+app.use("/api/orders", orderRoute);
 
 const PORT = 5000;
 
