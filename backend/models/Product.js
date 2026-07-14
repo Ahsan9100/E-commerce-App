@@ -5,11 +5,13 @@ const productSchema = new mongoose.Schema(
         title: {
             type: String,
             required: true,
+            trim: true,
         },
 
         description: {
             type: String,
             required: true,
+            trim: true,
         },
 
         price: {
@@ -22,6 +24,7 @@ const productSchema = new mongoose.Schema(
             ref: "Category",
             required: true,
         },
+
         image: {
             type: String,
             required: true,
